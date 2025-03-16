@@ -1,0 +1,12 @@
+@import "./fonts/stylesheet.css";
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lab Grotesque', sans-serif;
+    /*border: 1px solid red*/
+}
+
+body {
+    font-family: 'Lab Grotesque', sans-serif;
+    margin: 0;
+}

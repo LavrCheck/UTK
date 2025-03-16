@@ -1,0 +1,40 @@
+@use "../../utilities/colors"
+
+.Input
+  display: flex
+  flex-direction: column
+
+  label
+    font-weight: 500
+    font-size: 14px
+    line-height: 24px
+    color: black
+    margin: 8px 0
+
+  input
+    height: 40px
+    padding-left: 10px
+    caret-color: colors.$grey
+    border: 1px solid colors.$input-grey
+    border-radius: 3px
+    font-weight: 400
+    font-size: 14px
+    line-height: 24px
+
+    &::placeholder
+      font-weight: 400
+      font-size: 14px
+      line-height: 24px
+
+    -moz-appearance: textfield
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+
+    &:hover
+      border: 1px solid black
+
+    &:focus
+      border: 1px solid colors.$input-grey
+      outline: none

@@ -1,0 +1,87 @@
+@use "../../utilities/mixins"
+@use "../../utilities/colors"
+@use "sass:color"
+
+.PaymentsModal
+  @include mixins.flex-center-center
+  position: absolute
+  inset: 0
+  background: color.adjust(black, $lightness: 70%)
+
+  .content
+    width: 552px
+    border-radius: 30px
+    background: white
+    padding: 32px
+    position: relative
+    display: flex
+    flex-direction: column
+
+    @media (max-width: 768px)
+      width: 453px
+
+    @media (max-width: 480px)
+      height: 100%
+      width: 100%
+      border-radius: 0
+      padding: 32px 16px 16px 16px
+
+    .header
+      font-weight: 500
+      font-size: 28px
+      line-height: 40px
+      display: inline-block
+      margin-bottom: 6px
+
+      @media (max-width: 480px)
+        font-size: 18px
+        line-height: 24px
+        margin-bottom: 16px
+
+    p
+      margin: 0
+      font-weight: 400
+      font-size: 14px
+      line-height: 24px
+      color: colors.$grey
+
+      @media (max-width: 480px)
+        font-size: 12px
+        line-height: 16px
+
+    strong
+      font-weight: 500
+      font-size: 14px
+      line-height: 24px
+
+    .months-selector-container
+      display: flex
+      align-items: center
+
+      @media (max-width: 480px)
+        flex-direction: column
+        align-items: start
+
+      strong
+        margin-right: 38px
+
+        @media (max-width: 480px)
+          margin: 24px 0 16px 0
+
+    .close-icon-container
+      @include mixins.flex-center-center
+      width: 40px
+      aspect-ratio: 1/1
+      position: absolute
+      top: 16px
+      right: 16px
+
+      @media (max-width: 480px)
+        width: 24px
+
+      img
+        cursor: pointer
+        aspect-ratio: 1/1
+
+        @media (max-width: 480px)
+          width: 12px
